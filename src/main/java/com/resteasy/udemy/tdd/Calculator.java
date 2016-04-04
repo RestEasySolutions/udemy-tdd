@@ -10,11 +10,16 @@ public class Calculator {
 	private Stack<BigDecimal> values = new Stack<BigDecimal>();
 
 	public BigDecimal getAccumulator() {
+		if (values.empty()) {
+			return BigDecimal.ZERO;
+		}
 		return values.peek();
 	}
 
 	public void setAccumulator(BigDecimal value) {
-		values.pop();
+		if (!values.empty()) {
+			values.pop();
+		}
 		values.push(value);
 	}
 
