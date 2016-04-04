@@ -31,10 +31,19 @@ public class CalculatorWithThreeValuesTest {
 	}
 
 	@Test
-	public void testEnteringAndDroppingValues() {
+	public void testEnteringThreeValues() {
 		assertEquals(value3, calculator.getAccumulator());
+	}
+
+	@Test
+	public void testEnteringThreeValuesAndDroppingOne() {
 		calculator.drop();
 		assertEquals(value2, calculator.getAccumulator());
+	}
+
+	@Test
+	public void testEnteringThreeValuesAndDroppingTwo() {
+		calculator.drop();
 		calculator.drop();
 		assertEquals(value1, calculator.getAccumulator());
 	}
