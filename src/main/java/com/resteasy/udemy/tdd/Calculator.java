@@ -25,16 +25,12 @@ public class Calculator {
 	}
 
 	public void add() {
-		BigDecimal value1 = stack.peek();
-		stack.pop();
-		BigDecimal value2 = stack.peek();
-		stack.replaceTop(value1.add(value2));
+		Operation addOperation = new AddOperation();
+		addOperation.apply(stack);
 	}
 
 	public void subtract() {
-		BigDecimal value1 = stack.peek();
-		stack.pop();
-		BigDecimal value2 = stack.peek();
-		stack.replaceTop(value2.subtract(value1));
+		Operation subtractOperation = new SubtractOperation();
+		subtractOperation.apply(stack);
 	}
 }
