@@ -25,5 +25,9 @@ public class Calculator {
 	}
 
 	public void add() {
+		BigDecimal value1 = stack.peek();
+		stack.pop();
+		BigDecimal value2 = stack.peek();
+		stack.replaceTop(value1.add(value2));
 	}
 }
