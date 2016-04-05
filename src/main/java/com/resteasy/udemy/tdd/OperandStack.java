@@ -28,6 +28,8 @@ public class OperandStack {
 	}
 
 	public void pop() {
-		values.pop();
+		if (!values.empty()) {
+			values.pop();
+		}
 	}
 }
