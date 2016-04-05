@@ -28,8 +28,10 @@ public class OperandStack {
 	}
 
 	public void pop() {
+		// Check for empty stack
 		if (!values.empty()) {
 			values.pop();
 		}
+
 	}
 }
