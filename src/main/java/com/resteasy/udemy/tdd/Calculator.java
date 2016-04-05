@@ -35,5 +35,6 @@ public class Calculator {
 	}
 
 	public void execute(String s) {
+		add();
 	}
 }
