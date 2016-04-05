@@ -28,7 +28,7 @@ public class OperandStackTest {
 	public void testPushingValueOntoStack() {
 		BigDecimal value = new BigDecimal(12);
 		operandStack.push(value);
-		assertEquals(BigDecimal.ZERO, operandStack.peek());
+		assertEquals(value, operandStack.peek());
 	}
 
 
