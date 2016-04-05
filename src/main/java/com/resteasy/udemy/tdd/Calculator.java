@@ -33,4 +33,7 @@ public class Calculator {
 		Operation subtractOperation = new SubtractOperation();
 		subtractOperation.apply(stack);
 	}
+
+	public void execute(String s) {
+	}
 }
