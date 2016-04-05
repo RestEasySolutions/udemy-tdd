@@ -46,5 +46,20 @@ public class OperandStackTest {
 		assertEquals(value, operandStack.peek());
 	}
 
+	@Test
+	public void testPoppingValuesFromStack() {
+		BigDecimal value = new BigDecimal(66);
+		operandStack.push(value);
+		operandStack.push(new BigDecimal(5));
+		operandStack.pop();
+		assertEquals(value, operandStack.peek());
+	}
+
+	@Test
+	public void testPoppingValuesFromEmptyStack() {
+		operandStack.pop();
+		assertEquals(BigDecimal.ZERO, operandStack.peek());
+	}
+
 
 }
