@@ -28,5 +28,6 @@ public class OperandStack {
 	}
 
 	public void pop() {
+		values.pop();
 	}
 }
