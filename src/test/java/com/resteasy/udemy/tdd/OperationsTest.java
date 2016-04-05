@@ -40,5 +40,11 @@ public class OperationsTest {
 		assertEquals(new BigDecimal(24), calculator.getAccumulator());
 	}
 
+	@Test
+	public void testSubtractExecution() {
+		calculator.execute("-");
+		assertEquals(new BigDecimal(16), calculator.getAccumulator());
+	}
+
 
 }
