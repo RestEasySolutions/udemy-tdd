@@ -10,6 +10,9 @@ public class OperandStack {
 	private Stack<BigDecimal> values = new Stack<BigDecimal>();
 
 	public BigDecimal peek() {
+		if (values.empty()) {
+			return BigDecimal.ZERO;
+		}
 		return values.peek();
 	}
 
