@@ -30,4 +30,7 @@ public class Calculator {
 		BigDecimal value2 = stack.peek();
 		stack.replaceTop(value1.add(value2));
 	}
+
+	public void subtract() {
+	}
 }
