@@ -34,7 +34,11 @@ public class Calculator {
 		subtractOperation.apply(stack);
 	}
 
-	public void execute(String s) {
-		add();
+	public void execute(String operation) {
+		if ("+".equals(operation)) {
+			add();
+		} else if ("-".equals(operation)) {
+			subtract();
+		}
 	}
 }
