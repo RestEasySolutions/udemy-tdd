@@ -31,5 +31,13 @@ public class OperandStackTest {
 		assertEquals(value, operandStack.peek());
 	}
 
+	@Test
+	public void testReplacingTopOfStack() {
+		operandStack.push(new BigDecimal(22));
+		BigDecimal value = new BigDecimal(66);
+		operandStack.replaceTop(value);
+		assertEquals(value, operandStack.peek());
+	}
+
 
 }
