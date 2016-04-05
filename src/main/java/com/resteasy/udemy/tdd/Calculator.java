@@ -24,21 +24,13 @@ public class Calculator {
 		stack.pop();
 	}
 
-	public void add() {
-		Operation addOperation = new AddOperation();
-		addOperation.apply(stack);
-	}
-
-	public void subtract() {
-		Operation subtractOperation = new SubtractOperation();
-		subtractOperation.apply(stack);
-	}
-
-	public void execute(String operation) {
-		if ("+".equals(operation)) {
-			add();
-		} else if ("-".equals(operation)) {
-			subtract();
+	public void execute(String requestedOperation) {
+		Operation operation = null;
+		if ("+".equals(requestedOperation)) {
+			operation = new AddOperation();
+		} else if ("-".equals(requestedOperation)) {
+			operation = new SubtractOperation();
 		}
+		operation.apply(stack);
 	}
 }
