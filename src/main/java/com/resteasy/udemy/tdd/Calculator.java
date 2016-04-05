@@ -23,4 +23,7 @@ public class Calculator {
 	public void drop() {
 		stack.pop();
 	}
+
+	public void add() {
+	}
 }
