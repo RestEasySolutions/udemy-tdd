@@ -26,5 +26,6 @@ public class OperationsTest {
 	public void testAdd() {
 		calculator.add();
 		assertEquals(new BigDecimal(24), calculator.getAccumulator());
+
 	}
 }
