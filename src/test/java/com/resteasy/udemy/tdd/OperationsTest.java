@@ -34,5 +34,23 @@ public class OperationsTest {
 		assertEquals(new BigDecimal(16), calculator.getAccumulator());
 	}
 
+	@Test
+	public void testMultiplyExecution() {
+		calculator.execute("*");
+		assertEquals(new BigDecimal(80), calculator.getAccumulator());
+	}
+
+	@Test
+	public void testDivideExecution() {
+		calculator.execute("/");
+		assertEquals(new BigDecimal(5), calculator.getAccumulator());
+	}
+
+	@Test
+	public void testSquareExecution() {
+		calculator.execute("Sq");
+		assertEquals(new BigDecimal(16), calculator.getAccumulator());
+	}
+
 
 }

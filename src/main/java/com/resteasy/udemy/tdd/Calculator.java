@@ -30,6 +30,12 @@ public class Calculator {
 			operation = new AddOperation();
 		} else if ("-".equals(requestedOperation)) {
 			operation = new SubtractOperation();
+		} else if ("*".equals(requestedOperation)) {
+			operation = new MultiplyOperation();
+		} else if ("/".equals(requestedOperation)) {
+			operation = new DivideOperation();
+		} else if ("Sq".equals(requestedOperation)) {
+			operation = new SquareOperation();
 		}
 		operation.apply(stack);
 	}
